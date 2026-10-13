@@ -157,6 +157,14 @@ header{border-bottom:1px solid rgba(255,204,0,.18)}footer{border-top:1px solid r
 .hero:before{content:"";position:absolute;right:-12%;top:5%;width:65%;aspect-ratio:1;background:radial-gradient(circle,rgba(255,204,0,.17),transparent 65%);pointer-events:none}
 .hl{filter:drop-shadow(0 0 55px rgba(255,204,0,.3))}
 .price{text-shadow:0 0 18px rgba(255,204,0,.3)}
+.cc{display:flex;flex-wrap:wrap;gap:8px;padding:10px 12px;border-top:1px solid var(--line);max-height:45%;overflow-y:auto}
+.chip{background:rgba(255,204,0,.06);border:1px solid rgba(255,204,0,.55);color:var(--y);border-radius:999px;padding:8px 14px;font:600 .82rem inherit;font-family:inherit;cursor:pointer;transition:background .2s,color .2s,transform .15s}
+.chip:hover,.chip:focus-visible{background:var(--y);color:#000}.chip:active{transform:scale(.96)}.chip.bk{border-color:var(--line);color:var(--m);background:none}
+.cp{animation:pop .25s ease-out}.r,.m.u,.cl .btn{animation:pop .25s ease-out}
+@keyframes pop{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+#som{position:fixed;left:16px;bottom:16px;z-index:9;width:44px;height:44px;border-radius:50%;background:var(--bg2);border:1px solid rgba(255,204,0,.5);color:var(--y);display:grid;place-items:center;cursor:pointer;padding:0;transition:background .2s,transform .15s}
+#som:hover{background:rgba(255,204,0,.12)}#som:active{transform:scale(.94)}
+#som svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 </style>
 </head>
 <body>
@@ -205,8 +213,8 @@ const CONFIG={
  <p class="eyebrow">Escolha seu perfil</p>
  <h2>A ALFA atende dois perfis. Qual é o seu?</h2>
  <div class="grid g2">
-  <article class="card pf rv"><div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18M7 8h10"/></svg></div><p class="eyebrow" style="margin:0">Igrejas e ministérios</p><h3>Sua mensagem merece uma comunicação estratégica.</h3><p>Desenvolvemos estratégias de conteúdo e comunicação para fortalecer a identidade de igrejas e ministérios e facilitar a conexão com seu público.</p><a class="btn p" style="margin-top:20px" href="#solucoes" data-chat="Represento uma igreja ou ministério e quero conhecer as soluções.">CONHECER SOLUÇÕES PARA IGREJAS</a></article>
-  <article class="card pf rv"><div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9l1-5h16l1 5M4 9v11h16V9M9 20v-6h6v6"/></svg></div><p class="eyebrow" style="margin:0">Pequenos negócios</p><h3>Transforme sua operação em um processo mais estratégico.</h3><p>Ajudamos pequenos negócios a melhorar sua presença digital, organizar seus processos comerciais e encontrar novas oportunidades.</p><a class="btn p" style="margin-top:20px" href="#solucoes" data-chat="Tenho um pequeno negócio e quero conhecer as soluções.">CONHECER SOLUÇÕES PARA NEGÓCIOS</a></article>
+  <article class="card pf rv"><div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18M7 8h10"/></svg></div><p class="eyebrow" style="margin:0">Igrejas e ministérios</p><h3>Sua mensagem merece uma comunicação estratégica.</h3><p>Desenvolvemos estratégias de conteúdo e comunicação para fortalecer a identidade de igrejas e ministérios e facilitar a conexão com seu público.</p><a class="btn p" style="margin-top:20px" href="#solucoes" data-lobo="igreja">CONHECER SOLUÇÕES PARA IGREJAS</a></article>
+  <article class="card pf rv"><div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9l1-5h16l1 5M4 9v11h16V9M9 20v-6h6v6"/></svg></div><p class="eyebrow" style="margin:0">Pequenos negócios</p><h3>Transforme sua operação em um processo mais estratégico.</h3><p>Ajudamos pequenos negócios a melhorar sua presença digital, organizar seus processos comerciais e encontrar novas oportunidades.</p><a class="btn p" style="margin-top:20px" href="#solucoes" data-lobo="negocio">CONHECER SOLUÇÕES PARA NEGÓCIOS</a></article>
  </div>
 </div></section>
 
@@ -257,9 +265,9 @@ const CONFIG={
  <p id="fc"></p>
  <p>© <span id="yr"></span> ALFA. Todos os direitos reservados.</p>
 </div></footer>
-<button id="cb" class="cb" aria-expanded="false" aria-controls="cp"><span class="av" aria-hidden="true"></span>Tirar dúvidas</button>
-<div id="tz" class="tz" hidden><span>Oi! Posso tirar suas dúvidas sobre a ALFA?</span><button id="tzx" aria-label="Fechar aviso">✕</button></div>
-<div id="cp" class="cp" role="dialog" aria-label="Assistente virtual da ALFA" hidden><div class="ch"><div class="chl"><span class="av" aria-hidden="true"></span><div><b>Lobo da ALFA</b><br><small>Assistente virtual • tira dúvidas</small></div></div><button id="cx" aria-label="Fechar">✕</button></div><div id="cl" class="cl" aria-live="polite"></div><form id="cf" class="cfm"><input id="ci" aria-label="Sua mensagem" placeholder="Digite sua dúvida…" maxlength="500" autocomplete="off"><button class="btn p" type="submit">Enviar</button></form><p class="cn">Assistente de IA. Pode cometer erros.</p></div>
+<button id="cb" class="cb" aria-expanded="false" aria-controls="cp"><span class="av" aria-hidden="true"></span>Fale com o Lobo</button>
+<div id="tz" class="tz" hidden><span>Oi! Posso te ajudar a escolher o melhor serviço?</span><button id="tzx" aria-label="Fechar aviso">✕</button></div>
+<div id="cp" class="cp" role="dialog" aria-label="Lobo da ALFA, assistente virtual" hidden><div class="ch"><div class="chl"><span class="av" aria-hidden="true"></span><div><b>Lobo da ALFA</b><br><small>Assistente virtual • responde na hora</small></div></div><button id="cx" aria-label="Fechar">✕</button></div><div id="cl" class="cl" aria-live="polite"></div><div id="cc" class="cc"></div><p class="cn">Respostas automáticas. Para proposta, fale com a equipe.</p></div>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="wai" viewBox="0 0 24 24"><path fill="#000" d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2z"/><path fill="#ffcc00" d="M8.5 7.5c-.3 0-.8.1-1 .6-.3.7-.3 1.8.5 3.2 1 1.8 2.6 3.3 4.5 4 1.3.5 2.3.3 2.8-.3.2-.3.4-.8.2-1l-1.6-.9c-.2-.1-.5 0-.6.1l-.5.6c-.3.1-1.6-.5-2.4-1.5-.5-.7-.9-1.4-.8-1.7l.5-.6c.1-.2.2-.4.1-.6L9.2 7.8c-.1-.2-.4-.3-.7-.3z"/></symbol></svg>
 <a class="wa" data-wa="geral" href="#contato" aria-label="Falar pelo WhatsApp"><svg class="wi" aria-hidden="true"><use href="#wai"/></svg>WhatsApp</a>
 
@@ -316,17 +324,78 @@ if(on&&!rm)requestAnimationFrame(dr);else go=false}
 h.addEventListener("mousemove",e=>{const r=h.getBoundingClientRect();m.x=e.clientX-r.left;m.y=e.clientY-r.top});h.addEventListener("mouseleave",()=>{m.x=m.y=-999});
 if("IntersectionObserver"in window)new IntersectionObserver(es=>{on=es[0].isIntersecting;if(on&&!go&&!rm){go=true;dr()}}).observe(h);
 addEventListener("resize",rs);rs();go=!rm})();
-(()=>{const b=el("cb"),p=el("cp"),l=el("cl"),f=el("cf"),i=el("ci");let h=[],busy=false,gr=false;
-const add=(t,c)=>{const d=document.createElement("div");d.className="m "+c;d.textContent=t;if(c==="b"){const r=document.createElement("div");r.className="r";r.innerHTML='<span class="av sm" aria-hidden="true"></span>';r.appendChild(d);l.appendChild(r)}else l.appendChild(d);l.scrollTop=l.scrollHeight;return d};
-const wb=(t,u)=>{if(!waOk)return;const k=document.createElement("a");k.className="btn p";k.target="_blank";k.rel="noopener";k.href=u;k.textContent=t;l.appendChild(k)};
-b.onclick=()=>{el("tz").hidden=true;const o=p.hidden;p.hidden=!o;b.setAttribute("aria-expanded",o);if(o){i.focus();if(!gr){gr=true;add("Oi! 👋 Eu sou o Lobo, assistente da ALFA. Você procura uma solução para uma igreja/ministério ou para um pequeno negócio?","b")}}};
-const tz=el("tz");tz.firstChild.onclick=()=>b.click();el("tzx").onclick=()=>{tz.hidden=true};setTimeout(()=>{if(p.hidden&&!gr)tz.hidden=false},7000);
+(()=>{
+const b=el("cb"),p=el("cp"),l=el("cl"),cc=el("cc"),tz=el("tz");
+let S={perfil:"",desafio:"",proc:""},started=false;
+const PM=()=>S.perfil?` Meu perfil: ${S.perfil}.`:"",base="Olá! Vim pelo site da ALFA";
+const W={
+social:["QUERO SABER MAIS SOBRE SOCIAL MEDIA",()=>`${base} e quero saber mais sobre Social Media.${PM()}`],
+diag:["QUERO MEU DIAGNÓSTICO",()=>`${base} e tenho interesse no Diagnóstico Comercial.${PM()}`],
+prosp:["QUERO CONHECER A PROSPECÇÃO",()=>`${base} e quero saber como funciona a Prospecção Ativa.${PM()}`],
+impl:["QUERO ESTRUTURAR MEU PROCESSO",()=>`${base} e quero estruturar meu processo comercial.${PM()}`],
+preco:["CONSULTAR VALORES NO WHATSAPP",()=>`${base} e gostaria de consultar valores e entender qual opção faz sentido.${PM()}`],
+geral:["FALAR COM A ALFA NO WHATSAPP",()=>`${base} e gostaria de entender qual solução faz sentido para minha necessidade.${PM()}`]};
+const NM={social:"Social Media",diag:"Diagnóstico Comercial",prosp:"Prospecção Ativa",impl:"Implementação Comercial"};
+const more=[["Ver outros serviços","servicos"],["Voltar ao início","start"]];
+const set=(k,v,n)=>()=>{S[k]=v;go(n)};
+const N={
+start:{m:["Oi! 👋 Eu sou o Lobo, assistente da ALFA.","Como posso te ajudar?"],c:[["Sou de igreja ou ministério",()=>{S.perfil="igreja/ministério";go("igreja")}],["Tenho um pequeno negócio",()=>{S.perfil="pequeno negócio";go("negocio")}],["Quanto custa?","preco"],["O que a ALFA faz?","servicos"],["Falar com a equipe","equipe"]]},
+igreja:{m:["Que bom! Ajudamos igrejas e ministérios a comunicar melhor a sua mensagem, com respeito à sua identidade.","O que você mais precisa agora?"],c:[["Organizar as redes sociais","social"],["Divulgar cultos e eventos","social"],["Organizar contatos e acolhimento","impl"],["Não sei por onde começar","q1"]]},
+negocio:{m:["Perfeito! Vamos direto ao ponto.","O que mais pesa no seu negócio hoje?"],c:[["Poucos clientes novos","prosp"],["Redes sociais sem estratégia","social"],["Atendimento e vendas bagunçados","impl"],["Não sei onde está o problema","diag"]]},
+social:{m:["Social Media: planejamento e criação de conteúdo com estratégia e identidade, como posts, carrosséis, legendas e calendário.","O escopo varia conforme o pacote contratado."],wa:"social"},
+diag:{m:["Diagnóstico Comercial: analisamos a situação atual e entregamos um relatório com prioridades, recomendações e um plano inicial de ação.","É um serviço inicial, com escopo definido e sem obrigação de contratar outros serviços."],wa:"diag"},
+prosp:{m:["Prospecção Ativa: pesquisamos e organizamos potenciais clientes e preparamos abordagens para iniciar conversas comerciais relevantes.","Não garantimos quantidade de clientes ou vendas."],wa:"prosp"},
+impl:{m:["Implementação Comercial: transformamos a estratégia em processo prático, com etapas de atendimento, roteiros de follow-up, organização de leads e treinamento inicial.","O escopo é definido conforme a necessidade da sua empresa."],wa:"impl"},
+preco:{m:["Os valores dependem do serviço e do escopo.","Para receber as informações e uma proposta adequada, fale direto com a equipe da ALFA pelo WhatsApp."],wa:"preco"},
+servicos:{m:["Temos 4 serviços e você pode contratar cada um separadamente. Qual quer conhecer?"],c:[["Social Media","social"],["Diagnóstico Comercial","diag"],["Prospecção Ativa","prosp"],["Implementação Comercial","impl"],["Não sei qual escolher","q1"]]},
+equipe:{m:["Claro! Fale direto com a equipe da ALFA pelo WhatsApp."],wa:"geral"},
+q1:{m:["Vou te ajudar a descobrir. Qual é o seu maior desafio hoje?"],c:[["Conteúdo e redes sociais",set("desafio","conteúdo e redes sociais","q2")],["Conseguir novos clientes ou contatos",set("desafio","novos clientes","q2")],["Organizar atendimento e acompanhamento",set("desafio","organizar o atendimento","q2")],["Não sei onde está o problema",set("desafio","não sabe onde está o problema","q2")]]},
+q2:{m:["E você já tem um processo para atender e acompanhar quem demonstra interesse?"],c:[["Sim, bem organizado",set("proc","sim","res")],["Mais ou menos",set("proc","mais ou menos","res")],["Ainda não tenho",set("proc","não tem","res")]]},
+res:()=>{const d=S.desafio,k=d.startsWith("conte")?"social":d==="novos clientes"?"prosp":d.startsWith("organ")?"impl":"diag";
+const m=["Pelo que você me contou, o serviço que mais combina é: "+NM[k]+"."];
+if(S.proc==="não tem"&&k!=="impl"&&k!=="diag")m.push("Como você ainda não tem um processo, a Implementação Comercial pode ser um próximo passo.");
+m.push("A equipe confirma o melhor caminho com você no WhatsApp.");
+return{m,wa:["FALAR COM A ALFA NO WHATSAPP",()=>`${base} e fiz o quiz do site. Perfil: ${S.perfil||"não informado"}. Desafio: ${d}. Processo atual: ${S.proc}. Recomendação: ${NM[k]}.`]}}
+};
+const wait=ms=>new Promise(r=>setTimeout(r,ms)),sc=()=>{l.scrollTop=l.scrollHeight};
+const mk=(c,t)=>{const d=document.createElement("div");d.className=c;if(t)d.textContent=t;return d};
+function bot(){const r=mk("r");r.innerHTML='<span class="av sm" aria-hidden="true"></span>';const d=mk("m b");r.appendChild(d);l.appendChild(r);return d}
+function user(t){l.appendChild(mk("m u",t));sc()}
+async function say(a){for(const t of a){const d=bot();d.className="m b typing";d.innerHTML="<i></i><i></i><i></i>";sc();await wait(450+Math.min(t.length*7,450));d.className="m b";d.textContent=t;sc()}}
+function waBtn(w){if(!waOk)return;const a=Array.isArray(w)?w:W[w],k=document.createElement("a");k.className="btn p wb";k.target="_blank";k.rel="noopener";k.href=wa(a[1]());k.innerHTML='<svg class="wi" aria-hidden="true"><use href="#wai"/></svg>'+a[0];l.appendChild(k);sc()}
+async function go(key){cc.innerHTML="";const n=typeof N[key]==="function"?N[key]():N[key];await say(n.m);if(n.wa)waBtn(n.wa);
+const ch=[...(n.c||more)];if(n.c&&key!=="start")ch.push(["← Início","start","bk"]);
+ch.forEach(([t,a,k])=>{const c=document.createElement("button");c.type="button";c.className="chip"+(k?" "+k:"");c.textContent=t;
+c.onclick=()=>{user(t);cc.innerHTML="";if(typeof a==="string"){if(a==="start")S.desafio=S.proc="";go(a)}else a()};cc.appendChild(c)});sc()}
+const open=()=>{tz.hidden=true;p.hidden=false;b.setAttribute("aria-expanded",true)};
+b.onclick=()=>{if(!p.hidden){el("cx").onclick();return}open();if(!started){started=true;go("start")}};
 el("cx").onclick=()=>{p.hidden=true;b.setAttribute("aria-expanded",false);b.focus()};
-window.alfaChat=t=>{if(p.hidden)b.click();i.value=t;f.requestSubmit()};document.querySelectorAll("[data-chat]").forEach(a=>a.addEventListener("click",e=>{e.preventDefault();alfaChat(a.dataset.chat)}));
-f.onsubmit=async e=>{e.preventDefault();const t=i.value.trim();if(!t||busy)return;i.value="";add(t,"u");h.push({role:"user",content:t});busy=true;const w=add("","b");w.classList.add("typing");w.innerHTML="<i></i><i></i><i></i>";
-try{const r=await fetch("/api/chat",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({messages:h})});if(!r.ok)throw 0;const d=await r.json();if(!d.reply)throw 0;h.push({role:"assistant",content:d.reply});const m=d.reply.match(/\[\[WA\|([^|\]]*)\|([\s\S]*?)\]\]/);w.textContent=d.reply.replace(/\[\[WA\|[\s\S]*?\]\]/,"").trim();if(m)wb(m[1].trim()||"FALAR COM A ALFA NO WHATSAPP",wa(m[2].trim()))}
-catch{h.pop();w.textContent="Não consegui responder agora. Você pode falar direto com a nossa equipe pelo WhatsApp.";wb("FALAR NO WHATSAPP",wa(msgs.geral))}
-busy=false;l.scrollTop=l.scrollHeight};})();
+el("tzx").onclick=()=>{tz.hidden=true};tz.firstChild.onclick=()=>b.click();
+setTimeout(()=>{if(p.hidden&&!started)tz.hidden=false},7000);
+document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!p.hidden)el("cx").onclick()});
+window.lobo=(per,key,label)=>{open();started=true;l.innerHTML="";S={perfil:per,desafio:"",proc:""};user(label);go(key)};
+document.querySelectorAll("[data-lobo]").forEach(a=>a.addEventListener("click",e=>{e.preventDefault();const g=a.dataset.lobo==="igreja";lobo(g?"igreja/ministério":"pequeno negócio",g?"igreja":"negocio",g?"Sou de igreja ou ministério":"Tenho um pequeno negócio")}));
+})();
+
+
+</script>
+<button id="som" type="button"></button>
+<script>
+(()=>{let ctx,on=true,last=0,lastEl=null;
+try{on=localStorage.getItem("alfa_som")!=="off"}catch(e){}
+const AC=window.AudioContext||window.webkitAudioContext,S=".btn,button,.chip,.wa,.cb,summary,nav a,footer a,.tz span";
+function tone(f,t,d,v,type,dl){const o=ctx.createOscillator(),g=ctx.createGain(),s=ctx.currentTime+(dl||0);o.type=type||"sine";o.frequency.setValueAtTime(f,s);if(t)o.frequency.exponentialRampToValueAtTime(t,s+d);g.gain.setValueAtTime(.0001,s);g.gain.exponentialRampToValueAtTime(v,s+.008);g.gain.exponentialRampToValueAtTime(.0001,s+d);o.connect(g);g.connect(ctx.destination);o.start(s);o.stop(s+d+.02)}
+function play(k){if(!on||!AC)return;try{ctx=ctx||new AC();if(ctx.state==="suspended")ctx.resume();
+if(k==="hover")tone(1200,1500,.05,.025,"sine");
+else if(k==="ok"){tone(660,0,.09,.07,"triangle");tone(990,0,.14,.06,"triangle",.07)}
+else tone(520,780,.08,.06,"triangle")}catch(e){}}
+document.addEventListener("pointerover",e=>{if(e.pointerType!=="mouse")return;const t=e.target.closest&&e.target.closest(S);if(!t||t===lastEl)return;lastEl=t;const n=Date.now();if(n-last<70)return;last=n;play("hover")});
+document.addEventListener("pointerout",e=>{if(lastEl&&!lastEl.contains(e.relatedTarget))lastEl=null});
+document.addEventListener("click",e=>{const t=e.target.closest&&e.target.closest(S);if(!t||t.id==="som")return;play(t.matches(".btn.p,.wa,button[type=submit]")?"ok":"click")});
+const b=document.getElementById("som"),ON='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9zM16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/></svg>',OFF='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9zM17 9l5 6M22 9l-5 6"/></svg>';
+const ui=()=>{b.setAttribute("aria-pressed",on);b.setAttribute("aria-label",on?"Desativar sons do site":"Ativar sons do site");b.innerHTML=on?ON:OFF};
+b.onclick=()=>{on=!on;try{localStorage.setItem("alfa_som",on?"on":"off")}catch(e){}ui();if(on)play("ok")};ui();
+})();
 </script>
 </body>
 </html>
