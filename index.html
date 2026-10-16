@@ -211,6 +211,26 @@ header{border-bottom:1px solid rgba(255,204,0,.18)}footer{border-top:1px solid r
 .card .ph .cap{color:#fff;margin:0;font-size:clamp(.9rem,2.2vw,1.05rem)}
 .ph:not(.ctr):before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(11,11,12,.55),transparent 45%),linear-gradient(180deg,rgba(11,11,12,.35),transparent 40%)}
 .ph img{object-position:50% 40%}
+.cl>*{flex-shrink:0}
+.cl .btn{height:auto;min-height:46px;max-width:100%;white-space:normal;line-height:1.25;padding:12px 16px;text-align:left}
+.cp{height:min(480px,calc(100vh - 205px));z-index:20}
+.pkg{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px;align-items:stretch}
+.pkw{display:flex}.pkw.hot{filter:drop-shadow(0 0 24px rgba(255,204,0,.3))}
+.pk{flex:1;display:flex;padding:1.5px;background:linear-gradient(135deg,rgba(255,204,0,.45),rgba(255,204,0,.08) 45%,rgba(255,204,0,.3));clip-path:polygon(0 0,calc(100% - 28px) 0,100% 28px,100% 100%,0 100%)}
+.pk.t2{background:linear-gradient(135deg,rgba(255,204,0,.8),rgba(255,204,0,.12) 45%,rgba(255,204,0,.5))}
+.pk.t3{background:linear-gradient(135deg,#fff1a8,#ffcc00 35%,#a87408 70%,#ffcc00)}
+.pki{flex:1;display:flex;flex-direction:column;gap:14px;padding:26px 22px 22px;background:linear-gradient(160deg,rgba(255,255,255,.06),rgba(255,255,255,0) 40%),#141416;clip-path:polygon(0 0,calc(100% - 27px) 0,100% 27px,100% 100%,0 100%)}
+.tri{color:var(--y);letter-spacing:.25em;font-size:.85rem}
+.pkt{align-self:flex-start;margin:0;background:var(--y);color:#000;font:800 .64rem/1 "Sora","Inter",sans-serif;letter-spacing:.14em;text-transform:uppercase;padding:7px 12px 7px 18px;clip-path:polygon(8px 0,100% 0,100% 100%,0 100%)}
+.pki h3{font-size:1.8rem}.pki .pkd{color:var(--m);margin:0;font-size:.95rem;min-height:3.1em}
+.met{display:flex;align-items:center;gap:14px;margin-top:6px}
+.met b{font:800 2.8rem/1 "Sora","Inter",sans-serif;color:var(--y);text-shadow:0 0 22px rgba(255,204,0,.35);min-width:2.1ch}
+.met span{display:block;font-weight:700}.met small{display:block;color:var(--m);font-size:.82rem}
+.met.off b{color:#5b5b63;text-shadow:none}.met.off span{color:var(--m)}
+.bar{height:6px;border-radius:3px;background:rgba(255,255,255,.09);overflow:hidden}.bar i{display:block;height:100%;border-radius:3px;background:linear-gradient(90deg,#a87408,#ffcc00,#fff1a8)}
+.pki .btn{margin-top:auto;text-align:center}.pki .bar+.met{margin-top:10px}
+#pacotes .row{margin-top:32px}
+@media(max-width:860px){.pkg{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -336,7 +356,40 @@ const CONFIG={
  <div class="grid g2" id="services"></div>
 </div></section>
 
-<section class="alt" id="metodo"><div class="w">
+<section class="alt" id="pacotes"><div class="w">
+ <p class="eyebrow">Pacotes de Social Media</p>
+ <h2>Escolha o ritmo de conteúdo ideal para você.</h2>
+ <p class="sub">Três pacotes, com a quantidade de peças e de vídeos definida desde o início. Os valores são enviados pela equipe no WhatsApp.</p>
+ <div class="pkg">
+  <div class="pkw rv"><article class="pk t1"><div class="pki">
+   <div class="tri" aria-hidden="true">&#9650;</div><p class="pkt">Para começar</p>
+   <h3>Essencial</h3><p class="pkd">Presença organizada, com constância.</p>
+   <div class="met"><b>25</b><div><span>peças estáticas</span><small>Posts e carrosséis</small></div></div><div class="bar"><i style="width:100%"></i></div>
+   <div class="met off"><b>0</b><div><span>reels editados</span><small>Não incluídos neste pacote</small></div></div><div class="bar"><i style="width:0"></i></div>
+   <a class="btn p" data-wa="pkE" href="#contato">QUERO O ESSENCIAL</a>
+  </div></article></div>
+  <div class="pkw rv"><article class="pk t2"><div class="pki">
+   <div class="tri" aria-hidden="true">&#9650;&#9650;</div><p class="pkt">Com reels</p>
+   <h3>Crescimento</h3><p class="pkd">Mais movimento, com vídeos no ritmo do perfil.</p>
+   <div class="met"><b>25</b><div><span>peças estáticas</span><small>Posts e carrosséis</small></div></div><div class="bar"><i style="width:100%"></i></div>
+   <div class="met"><b>7</b><div><span>reels editados</span><small>Vídeos curtos e dinâmicos</small></div></div><div class="bar"><i style="width:47%"></i></div>
+   <a class="btn p" data-wa="pkC" href="#contato">QUERO O CRESCIMENTO</a>
+  </div></article></div>
+  <div class="pkw hot rv"><article class="pk t3"><div class="pki">
+   <div class="tri" aria-hidden="true">&#9650;&#9650;&#9650;</div><p class="pkt">Mais completo</p>
+   <h3>Completo</h3><p class="pkd">O pacote com mais vídeos para dar vida ao perfil.</p>
+   <div class="met"><b>25</b><div><span>peças estáticas</span><small>Posts e carrosséis</small></div></div><div class="bar"><i style="width:100%"></i></div>
+   <div class="met"><b>15</b><div><span>reels editados</span><small>Vídeos curtos e dinâmicos</small></div></div><div class="bar"><i style="width:100%"></i></div>
+   <a class="btn p" data-wa="pkF" href="#contato">QUERO O COMPLETO</a>
+  </div></article></div>
+ </div>
+ <div class="row" style="align-items:center;justify-content:space-between">
+  <p class="note" style="margin:0;max-width:520px">Cada pacote é combinado antes de começar, e você pode trocar de pacote conforme a sua necessidade.</p>
+  <a class="btn s" data-wa="social" href="#contato">ME AJUDE A ESCOLHER</a>
+ </div>
+</div></section>
+
+<section id="metodo"><div class="w">
  <p class="eyebrow">Como trabalhamos</p>
  <h2>Sem improviso. Cada passo tem um motivo.</h2>
  <p class="sub">Cada serviço pode ser contratado individualmente. Não é preciso comprar um diagnóstico para contratar outro serviço, embora o levantamento inicial necessário seja feito antes de cada projeto.</p>
@@ -388,13 +441,13 @@ const ic={u:I('<circle cx="9" cy="8" r="3"/><path d="M3 20c0-3 3-5 6-5s6 2 6 5M1
 const el=id=>document.getElementById(id);
 const data={
 services:[
-{k:"social",i:"ig",t:"Social Media",h:"Conteúdo com estratégia e identidade.",d:"Ajudamos igrejas, ministérios, empresas e comércios a fortalecer sua presença digital por meio de planejamento e criação de conteúdo estratégico.",l:["Planejamento de conteúdo","Criação de posts e carrosséis","Redação de legendas","Calendário de publicações","Definição de temas e chamadas para ação","Organização visual da comunicação","Orientações para melhorar o conteúdo","Relatórios simples de desempenho, quando incluídos"],ch:"Para igrejas: conteúdo adaptado à identidade ministerial, à divulgação de cultos, eventos, mensagens e projetos.",bz:"Para empresas e comércios: conteúdos que apresentam produtos e serviços, fortalecem a marca e estimulam contatos comerciais.",pr:"Planos a partir de R$ 497/mês",nt:"O que está incluído varia conforme o pacote escolhido.",b:"QUERO SABER MAIS SOBRE SOCIAL MEDIA"},
+{k:"social",i:"ig",t:"Social Media",h:"Conteúdo com estratégia e identidade.",d:"Ajudamos igrejas, ministérios, empresas e comércios a fortalecer sua presença digital por meio de planejamento e criação de conteúdo estratégico.",l:["Planejamento de conteúdo","Criação de posts e carrosséis","Redação de legendas","Calendário de publicações","Definição de temas e chamadas para ação","Organização visual da comunicação","Orientações para melhorar o conteúdo","Relatórios simples de desempenho, quando incluídos"],ch:"Para igrejas: conteúdo adaptado à identidade ministerial, à divulgação de cultos, eventos, mensagens e projetos.",bz:"Para empresas e comércios: conteúdos que apresentam produtos e serviços, fortalecem a marca e estimulam contatos comerciais.",pr:"Pacotes Essencial, Crescimento e Completo",nt:"O que está incluído varia conforme o pacote escolhido.",b:"QUERO SABER MAIS SOBRE SOCIAL MEDIA"},
 {k:"diagnostico",i:"e",t:"Diagnóstico Comercial",h:"Descubra onde estão suas oportunidades de melhoria.",d:"Analisamos a situação atual para identificar pontos fortes, obstáculos e ações que podem melhorar sua comunicação ou operação comercial.",l:["Levantamento inicial","Análise da presença digital","Avaliação da comunicação","Análise do processo comercial, quando aplicável","Identificação de problemas e oportunidades","Relatório com prioridades","Recomendações práticas","Plano inicial de ação"],ch:"Para igrejas: avaliamos a comunicação, a organização dos canais e os caminhos de contato e acolhimento.",bz:"Para empresas e comércios: avaliamos atração de clientes, atendimento, prospecção, acompanhamento e processo de vendas.",pr:"Entrada: R$ 99,90",nt:"O diagnóstico identifica e recomenda. A execução das melhorias é contratada separadamente.",b:"QUERO MEU DIAGNÓSTICO"},
 {k:"prospeccao",i:"s",t:"Prospecção Ativa",h:"Encontre novas oportunidades de negócio.",d:"Estruturamos processos de pesquisa, identificação e abordagem de potenciais clientes para ajudar empresas a iniciar conversas comerciais relevantes.",l:["Definição do perfil de cliente ideal","Pesquisa de potenciais clientes","Organização de listas de leads","Qualificação inicial dos contatos","Identificação de oportunidades de abordagem","Criação de roteiros personalizados","Organização do acompanhamento","Registro de respostas e oportunidades","Relatórios de atividade, conforme o plano"],ch:"Para igrejas e ministérios: contatos institucionais, parcerias e convites, quando houver necessidade, autorização e adequação ao contexto.",bz:"Para empresas e comércios: iniciar conversas com potenciais clientes de forma organizada.",pr:"Valor combinado conforme a sua necessidade",nt:"Diferenciamos pesquisa de leads, preparação de abordagens e execução da prospecção. Não garantimos quantidade de clientes ou vendas.",b:"QUERO CONHECER A PROSPECÇÃO"},
 {k:"implementacao",i:"p",t:"Implementação Comercial",h:"Estruture um processo que sua equipe consiga executar.",d:"Transformamos estratégias em processos práticos para organizar a operação comercial, melhorar o acompanhamento de oportunidades e dar mais clareza à rotina da equipe.",l:["Levantamento do processo atual","Desenho do processo comercial","Estruturação do funil de oportunidades","Definição das etapas de atendimento","Roteiros de abordagem e follow-up","Organização de leads em planilha ou ferramenta adequada","Organização básica de ferramentas existentes","Definição de indicadores","Criação de uma rotina comercial","Treinamento inicial","Manual simples de utilização","Testes e ajustes previstos no projeto"],ch:"Para igrejas: processos de comunicação, contato, recepção e acompanhamento de interessados.",bz:"Para empresas e comércios: o caminho entre a atração do potencial cliente, o atendimento, a proposta, o acompanhamento e o fechamento.",pr:"Valor combinado conforme a sua necessidade",nt:"Não garantimos aumento de vendas.",b:"QUERO ESTRUTURAR MEU PROCESSO"}],
 steps:[["ENTENDER","Entendemos sua realidade."],["IDENTIFICAR","Identificamos necessidades e oportunidades."],["DEFINIR","Definimos a solução adequada."],["EXECUTAR","Executamos o serviço contratado."],["AVALIAR","Avaliamos o que foi feito e identificamos possíveis ajustes."]],
 faq:[["A ALFA atende igrejas, empresas e comércios?","Sim. A ALFA atende igrejas, ministérios, empresas e comércios, adaptando cada serviço à realidade e à identidade de cada um."],["Posso contratar somente um serviço?","Sim. Todos os serviços podem ser contratados individualmente. Antes de cada projeto, fazemos o levantamento inicial necessário para entender o seu cenário."],["Como funciona o diagnóstico comercial?","Fazemos um levantamento da situação atual e analisamos a presença digital, a comunicação e, quando aplicável, o processo comercial. Você recebe um relatório com prioridades, recomendações práticas e um plano inicial de ação. O diagnóstico identifica e recomenda; a execução é contratada separadamente."],["A ALFA faz prospecção ativa?","Sim. Estruturamos pesquisa, qualificação e abordagem de potenciais clientes, conforme o combinado. Não garantimos quantidade de clientes ou vendas."],["O que está incluído na implementação comercial?","Transformamos a estratégia em rotina: desenho do processo comercial, funil de oportunidades, roteiros de abordagem e follow-up, organização de leads e ferramentas, indicadores, treinamento inicial e manual simples. O que exatamente será feito é combinado na proposta."],["Como solicitar uma proposta?","Fale com a ALFA pelo WhatsApp e conte seu objetivo. Indicamos o serviço mais adequado e preparamos a proposta conforme o que você precisa."],["Como funciona o atendimento?","O primeiro contato é pelo WhatsApp: entendemos sua necessidade e indicamos o caminho. Antes de começar, combinamos exatamente o que será feito."],["A ALFA garante resultados?","Não. Trabalhamos com estratégia, organização e acompanhamento, mas os resultados dependem também de fatores do seu contexto. Para igrejas, oferecemos estrutura de comunicação, sem prometer resultados espirituais ou crescimento garantido."]]};
-const msgs={geral:"Olá! Vim pelo site da ALFA e gostaria de entender qual solução faz sentido para minha necessidade.",social:"Olá! Vim pelo site da ALFA e quero saber mais sobre Social Media.",diagnostico:"Olá! Vim pelo site da ALFA e tenho interesse no Diagnóstico Comercial.",prospeccao:"Olá! Vim pelo site da ALFA e quero saber como funciona a Prospecção Ativa.",implementacao:"Olá! Vim pelo site da ALFA e quero estruturar meu processo comercial."};
+const msgs={geral:"Olá! Vim pelo site da ALFA e gostaria de entender qual solução faz sentido para minha necessidade.",social:"Olá! Vim pelo site da ALFA e quero saber mais sobre Social Media.",pkE:"Olá! Vim pelo site da ALFA e quero saber mais sobre o pacote Essencial de Social Media.",pkC:"Olá! Vim pelo site da ALFA e quero saber mais sobre o pacote Crescimento de Social Media.",pkF:"Olá! Vim pelo site da ALFA e quero saber mais sobre o pacote Completo de Social Media.",diagnostico:"Olá! Vim pelo site da ALFA e tenho interesse no Diagnóstico Comercial.",prospeccao:"Olá! Vim pelo site da ALFA e quero saber como funciona a Prospecção Ativa.",implementacao:"Olá! Vim pelo site da ALFA e quero estruturar meu processo comercial."};
 const wa=t=>`https://wa.me/${CONFIG.WHATSAPP}?text=${encodeURIComponent(t)}`;
 const waOk=/^\d{12,13}$/.test(CONFIG.WHATSAPP);
 el("services").innerHTML=data.services.map(s=>`<article class="card svc rv"><div class="ic">${ic[s.i]}</div><p class="eyebrow" style="margin:0 0 8px">${s.t}</p><h3>${s.h}</h3><p>${s.d}</p><p class="note" style="margin:14px 0 0">O que pode estar incluído, conforme o combinado:</p><ul>${s.l.map(x=>`<li>${x}</li>`).join("")}</ul><p class="pos" style="margin-top:14px">${s.ch}</p><p class="pos" style="margin-top:6px">${s.bz}</p><p class="price">${s.pr}</p><p class="note">${s.nt}</p><a class="btn p" data-wa="${s.k}" href="#contato">${s.b}</a></article>`).join("");
@@ -453,7 +506,7 @@ const N={
 start:{m:["Oi! 👋 Eu sou o Lobo, assistente da ALFA.","Me conta: o que você mais quer melhorar agora?"],c:[["Sou de igreja ou ministério",()=>{S.perfil="igreja/ministério";go("igreja")}],["Tenho uma empresa ou comércio",()=>{S.perfil="empresa ou comércio";go("negocio")}],["Quanto custa?","preco"],["O que a ALFA faz?","servicos"],["Falar com a equipe","equipe"]]},
 igreja:{m:["Que bom! Ajudamos igrejas e ministérios a comunicar melhor a sua mensagem, com respeito à sua identidade.","O que você mais precisa agora?"],c:[["Organizar as redes sociais","social"],["Divulgar cultos e eventos","social"],["Organizar contatos e acolhimento","impl"],["Não sei por onde começar","q1"]]},
 negocio:{m:["Perfeito! Vamos direto ao ponto.","O que mais pesa no seu negócio hoje?"],c:[["Poucos clientes novos","prosp"],["Redes sociais sem estratégia","social"],["Atendimento e vendas bagunçados","impl"],["Não sei onde está o problema","diag"]]},
-social:{m:["Social Media: planejamento e criação de conteúdo com estratégia e identidade, como posts, carrosséis, legendas e calendário.","O que está incluído varia conforme o pacote escolhido.","Quer ver como isso funcionaria no seu caso? Toque abaixo."],wa:"social"},
+social:{m:["Social Media: planejamento e criação de conteúdo com estratégia e identidade, como posts, carrosséis, legendas e calendário.","Temos 3 pacotes: Essencial, Crescimento e Completo, com posts, carrosséis e reels. Os valores a equipe passa no WhatsApp.","Quer ver como isso funcionaria no seu caso? Toque abaixo."],wa:"social"},
 diag:{m:["Diagnóstico Comercial: analisamos a situação atual e entregamos um relatório com prioridades, recomendações e um plano inicial de ação.","É um serviço inicial, com tudo bem definido e sem obrigação de contratar outros serviços.","Quer ver como isso funcionaria no seu caso? Toque abaixo."],wa:"diag"},
 prosp:{m:["Prospecção Ativa: pesquisamos e organizamos potenciais clientes e preparamos abordagens para iniciar conversas comerciais relevantes.","Não garantimos quantidade de clientes ou vendas.","Quer ver como isso funcionaria no seu caso? Toque abaixo."],wa:"prosp"},
 impl:{m:["Implementação Comercial: transformamos a estratégia em processo prático, com etapas de atendimento, roteiros de follow-up, organização de leads e treinamento inicial.","O que será feito é definido conforme a necessidade da sua empresa.","Quer ver como isso funcionaria no seu caso? Toque abaixo."],wa:"impl"},
